@@ -1,14 +1,15 @@
 # FitFlow Redesign 🚀
+
 ### Next-Generation Health & Fitness Platform with AI Personalization, Computer Vision Meal Tracking & Private Social Accountability
 
 [![CI/CD Pipeline](https://github.com/PawanSGunadinghe/fitflow-redesign/actions/workflows/ci.yml/badge.svg)](https://github.com/PawanSGunadinghe/fitflow-redesign/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.4-blue.svg)](https://www.typescriptlang.org/)
-[![React Native](https://img.shields.io/badge/React%20Native-Expo%2051-61DAFB.svg)](https://reactnative.dev/)
+[![React Native](<https://img.shields.io/badge/React%20Native-Expo%2051-61DAFB.svg>)](https://reactnative.dev/)
 [![NestJS](https://img.shields.io/badge/NestJS-10.3-E0234E.svg)](https://nestjs.com/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688.svg)](https://fastapi.tiangolo.com/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791.svg)](https://www.postgresql.org/)
-[![Compliance](https://img.shields.io/badge/Compliance-HIPAA%20%7C%20GDPR-success.svg)](#security--compliance)
+[![Compliance](<https://img.shields.io/badge/Compliance-HIPAA%20%7C%20GDPR-success.svg>)](#security--compliance)
 
 ---
 
@@ -17,6 +18,7 @@
 **FitFlow Redesign** is a comprehensive architectural and user-experience transformation of the FitFlow fitness tracking ecosystem. Developed under the **IT3060 Human Computer Interaction (HCI)** curriculum at **SLIIT (Faculty of Computing)**, this project translates rigorous user research, iterative usability testing (raising the System Usability Scale score from **68 to 87**), and human-centered design principles into a cloud-native, enterprise-grade polyglot microservice platform.
 
 ### The Problem We Solved
+
 - **Drop-off Reversal**: 68% of new users abandoned FitFlow post-onboarding due to rigid routines and tedious food logging.
 - **Adaptive Scheduling (Alex Rivera Persona)**: Busy professionals needed workouts that dynamically adapt to irregular schedules, fluctuating energy levels, and acute muscle soreness.
 - **Instant Nutrition Recognition**: Tedious manual search-and-log meal entry replaced with sub-second computer vision camera recognition.
@@ -77,15 +79,15 @@ graph TB
 
 ## ⚡ Technology Stack Summary
 
-| Domain | Selected Technology | Rationale & Trade-offs |
-| :--- | :--- | :--- |
-| **Mobile & Web Frontend** | **React Native (Expo SDK 51 + TypeScript)** | >90% code reuse across iOS, Android, and Web. 60+ FPS animation fluidity via Reanimated 3 for drag-and-drop workout creation. |
-| **Core API Gateway & Backend** | **Node.js (NestJS Framework)** | Full-stack TypeScript consistency, modular dependency injection, enterprise structure, and high asynchronous I/O throughput. |
-| **AI & Vision Microservice** | **Python (FastAPI + PyTorch/YOLOv8)** | Dedicated high-performance microservice isolating compute-intensive meal segmentation and ML workout recommendations. |
-| **Primary Database** | **PostgreSQL 16** | Strict relational integrity and ACID transactions for biometric health logs, protected by native Row-Level Security (RLS). |
-| **In-Memory Cache & Leaderboards** | **Redis 7** | Sub-millisecond latency for session verification, rate limiting, and real-time community challenge leaderboards. |
-| **Real-Time Layer & Push** | **Socket.io + Firebase Cloud Messaging** | Instant high-fives and streak celebrations in private circles; reliable cross-platform background push notifications. |
-| **Authentication & AuthZ** | **Supabase Auth / Firebase Auth** | Multi-factor authentication, biometric unlock, and native PostgreSQL RLS claims verification. |
+| Domain                                   | Selected Technology                               | Rationale & Trade-offs                                                                                                        |
+| :--------------------------------------- | :------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------- |
+| **Mobile & Web Frontend**          | **React Native (Expo SDK 51 + TypeScript)** | >90% code reuse across iOS, Android, and Web. 60+ FPS animation fluidity via Reanimated 3 for drag-and-drop workout creation. |
+| **Core API Gateway & Backend**     | **Node.js (NestJS Framework)**              | Full-stack TypeScript consistency, modular dependency injection, enterprise structure, and high asynchronous I/O throughput.  |
+| **AI & Vision Microservice**       | **Python (FastAPI + PyTorch/YOLOv8)**       | Dedicated high-performance microservice isolating compute-intensive meal segmentation and ML workout recommendations.         |
+| **Primary Database**               | **PostgreSQL 16**                           | Strict relational integrity and ACID transactions for biometric health logs, protected by native Row-Level Security (RLS).    |
+| **In-Memory Cache & Leaderboards** | **Redis 7**                                 | Sub-millisecond latency for session verification, rate limiting, and real-time community challenge leaderboards.              |
+| **Real-Time Layer & Push**         | **Socket.io + Firebase Cloud Messaging**    | Instant high-fives and streak celebrations in private circles; reliable cross-platform background push notifications.         |
+| **Authentication & AuthZ**         | **Supabase Auth / Firebase Auth**           | Multi-factor authentication, biometric unlock, and native PostgreSQL RLS claims verification.                                 |
 
 ---
 
@@ -135,11 +137,13 @@ fitflow-redesign/
 ## 🚀 Quick Start Guide
 
 ### Prerequisites
+
 - **Node.js**: v20.x or higher
 - **Python**: v3.11 or higher
 - **Git**
 
 ### 1. Frontend (React Native / Expo)
+
 ```bash
 cd frontend
 npm install
@@ -148,6 +152,7 @@ npm start
 ```
 
 ### 2. Core Backend (NestJS)
+
 ```bash
 cd backend
 npm install
@@ -156,6 +161,7 @@ npm run start:dev
 ```
 
 ### 3. AI & Vision Microservice (FastAPI)
+
 ```bash
 cd ai-service
 python -m venv venv
@@ -170,6 +176,7 @@ uvicorn main:app --reload --port 8000
 ## 🔒 Security & Compliance
 
 FitFlow handles Protected Health Information (PHI) and operates under strict **HIPAA**, **GDPR**, and **CCPA** compliance:
+
 1. **Data in Transit**: Enforced **TLS 1.3** transport encryption across all client, gateway, and microservice traffic.
 2. **Data at Rest**: **AES-256-GCM** encryption on all PostgreSQL database volumes and object storage buckets.
 3. **Row-Level Security (RLS)**: User health records and workout logs are partitioned at the database kernel level; users can never read or mutate records outside their authenticated tenant.
@@ -181,13 +188,14 @@ FitFlow handles Protected Health Information (PHI) and operates under strict **H
 ## 📚 Essential Documentation Links
 
 - 📄 **[Lab Exercise 05 Complete Report](file:///c:/Users/pawan/OneDrive/Documents/GitHub/fitflow-redesign-1/LAB_REPORT_05.md)**
-- 📐 **[System Architecture & Data Flows](file:///c:/Users/pawan/OneDrive/Documents/GitHub/fitflow-redesign-1/docs/system-architecture.md)**
+- 📐 **[System Architecture &amp; Data Flows](file:///c:/Users/pawan/OneDrive/Documents/GitHub/fitflow-redesign-1/docs/system-architecture.md)**
 - 📝 **[Architecture Decision Record (ADR-001)](file:///c:/Users/pawan/OneDrive/Documents/GitHub/fitflow-redesign-1/docs/architecture-decision-records/ADR-001-tech-stack-selection.md)**
-- 📊 **[Technology Comparison & Decision Matrix](file:///c:/Users/pawan/OneDrive/Documents/GitHub/fitflow-redesign-1/docs/technology-comparison-matrix.md)**
-- 🛡️ **[Branch Protection & Git Workflow Guide](file:///c:/Users/pawan/OneDrive/Documents/GitHub/fitflow-redesign-1/docs/branch-protection-guide.md)**
+- 📊 **[Technology Comparison &amp; Decision Matrix](file:///c:/Users/pawan/OneDrive/Documents/GitHub/fitflow-redesign-1/docs/technology-comparison-matrix.md)**
+- 🛡️ **[Branch Protection &amp; Git Workflow Guide](file:///c:/Users/pawan/OneDrive/Documents/GitHub/fitflow-redesign-1/docs/branch-protection-guide.md)**
 
 ---
 
 ## 👥 Contributors
-- **Pawan Gunadinghe** - BSc (Hons) in Information Technology, Year 3, SLIIT
+
+- **Pawan Gunadinghe(IT23675070)** - BSc (Hons) in Information Technology, Year 3, SLIIT
 - **Module**: IT3060 - Human Computer Interaction (HCI)
