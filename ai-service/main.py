@@ -1,6 +1,7 @@
 import time
 import uuid
 from typing import List
+# pyrefly: ignore [missing-import]
 from fastapi import FastAPI, HTTPException, UploadFile, File
 from models.schemas import (
     WorkoutRecommendationRequest,
